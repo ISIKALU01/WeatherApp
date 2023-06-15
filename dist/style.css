@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+    background-image: url('./weather.jpg');
+    background-size: cover;
+}
+
+header h1{
+    line-height: 1.2;
+    padding: 1rem;
+  }
+
+.header {
+  display: flex;
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* justify-content: space-between; */
+  /* width: 100%; */
+  /* padding: 20px; */
+  /* background-color: rgba(0, 0, 0, 0.9); */
+  /* border-bottom: 1px solid #222; */
+  /* color: rgb(252, 203, 186); */
+
+}
