@@ -3,7 +3,7 @@ const view = (() => {
       if (!weatherData) return;
   
       const weatherResult = document.getElementById("weatherResult");
-      // weatherResult.classList.add("active");
+      weatherResult.classList.add("active");
   
       const cityName = document.getElementById("cityName");
       const temperature = document.getElementById("temperature");
@@ -17,8 +17,13 @@ const view = (() => {
       humidity.textContent = `Humidity: ${weatherData.humidity} %`;
       wind.textContent = `Wind: ${weatherData.windSpeed} m/h`;
     }
+
+    function clearWeatherResult(){
+      const weatherResult = document.getElementById('weatherResult')
+      weatherResult.classList.remove('active')
+    }
   
-    return { setWeatherResult };
+    return { setWeatherResult, clearWeatherResult };
   })();
   
 export default view;

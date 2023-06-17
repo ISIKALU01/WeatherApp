@@ -13,6 +13,7 @@ const weather = (() => {
         const data = processData(await response.json());
         return data;
       } catch (error) {
+        alert(error)
         return null;
       }
     }
