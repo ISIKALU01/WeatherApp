@@ -1,5 +1,20 @@
-const endpoint = 'http://api.weatherapi.com/v1/current.json?key=1bf8f4b95ad14cf186b162118230606 &q=london&aqi=no'
-const response = await fetch(endpoint, { mode: "cors" });
-const data = await response.json();
-console.log(data)
+import weather from "./modules/weather";
+import view from "./modules/viewresult";
 
+
+const searchForm = document.getElementById('searchForm')
+const searchInput = document.querySelector('input[type="text"]');
+const searchBtn = document.getElementById('searchBtn');
+
+searchForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+  });
+
+
+searchBtn.addEventListener("click", async () => {
+    if (searchInput.value === "") return;
+    const weatherData = await weather.fetchData(searchInput.value);
+    console.log(weatherData)
+    console.log(searchInput.value)
+    view.setWeatherResult(weatherData);
+  });
