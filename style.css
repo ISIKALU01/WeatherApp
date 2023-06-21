@@ -6,6 +6,12 @@
   margin: 0;
 }
 
+html {
+  /* footer support */
+  position: relative;
+  min-height: 100%;
+}
+
 body{
     background-image: url('./weather.jpg');
     background-size: cover;
@@ -126,6 +132,31 @@ input {
   font-size: 1.2rem;
   font-style: italic;
   color: bisque;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.781);
+  color: antiquewhite;
+  font-size: 18px;
+}
+
+.fa-github {
+  color: antiquewhite;
+  font-size: 22px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
 }
 
 
