@@ -6,7 +6,7 @@ const weather = (() => {
     }
   
     async function fetchData(city) {
-      const endpoint = 'http://api.weatherapi.com/v1/current.json?key=1bf8f4b95ad14cf186b162118230606&q='+ city +'&aqi=no'
+      const endpoint = 'https://api.weatherapi.com/v1/current.json?key=1bf8f4b95ad14cf186b162118230606&q='+ city +'&aqi=no'
       try {
         const response = await fetch(endpoint, { mode: "cors" });
         if (!response.ok) throw new Error(`City ${city} not found`);
