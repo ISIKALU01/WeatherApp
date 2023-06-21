@@ -20,7 +20,6 @@ header h1{
     color: antiquewhite;
     font-family: 'Righteous', cursive;
     font-size: 2.5rem;
-    font-weight: 700;
   }
 
 .header {
@@ -138,3 +137,28 @@ input {
     opacity: 1;
   }
 }
+
+
+/* media queries */
+@media (max-width:400px){
+  .header h1{
+    font-size: 1.5rem;
+  }
+
+  .header {
+    padding: 10px;
+  }
+
+  .weather-result h3 {
+    font-size: 2.5rem;
+  }
+
+  .input{
+    margin-bottom: 0.5rem;
+  }
+
+  .weather-result p:nth-child(2) {
+    font-size: 1rem;
+  }
+}
+
